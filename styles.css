@@ -307,7 +307,6 @@ body {
 }
 
 .section-title {
-  composes: gradient-text; /* fallback below for non-supporting browsers */
   background: var(--gradient-accent);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
