@@ -436,6 +436,14 @@ body {
     }
   }
 
+  .header__nav-active {
+    color: var(--clr-accent) !important;
+
+    &::after {
+      width: 100% !important;
+    }
+  }
+
   @media (max-width: 768px) {
     position: fixed;
     right: -100%;
