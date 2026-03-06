@@ -3,10 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Creative Visual Designs (CVD) is a platform for showcasing creative projects and visual designs"
-    />
+    <meta name="description" content="My Personal Portfolio" />
     <link
       rel="shortcut icon"
       href="./assets/loteria_logo.png"
@@ -21,7 +18,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
     />
-    <title>Creative Visual Designs - Home</title>
+    <title>Loteria De Portfolio - Home</title>
   </head>
   <body>
     <!-- BACKGROUND ANIMATION -->
@@ -65,12 +62,6 @@
         </nav>
       </div>
     </header>
-
-    <!-- =====================================================
-         HERO
-         Animations: CSS keyframes on page load (no observer)
-         title ← left | subtitle → right | desc ↑ | image scale
-         ===================================================== -->
     <section class="hero">
       <div class="hero__background">
         <img
@@ -83,8 +74,6 @@
       <div class="container">
         <div class="hero__grid">
           <div class="hero__section-left">
-            <!-- hero__title, hero__subtitle, hero__description, hero-socials-container
-                 all have CSS keyframe animations defined in animations.css -->
             <div class="hero__typography">
               <h1 class="hero__title">Hi, I'm Bryne Loteria</h1>
               <h2 class="hero__subtitle">Aspiring Software Engineer</h2>
@@ -110,28 +99,19 @@
               </a>
             </div>
           </div>
-          <!-- hero__image has CSS keyframe scale-in animation -->
           <div class="hero__section-right">
             <img src="./assets/hero__image.png" alt="" class="hero__image" />
           </div>
         </div>
       </div>
     </section>
-
-    <!-- =====================================================
-         ABOUT ME
-         Animations: alternating slide-left / slide-right
-         Row 1: text ← left,  image scroller → right
-         Row 2: image scroller ← left, text → right
-         Row 3: text ← left,  image scroller → right
-         ===================================================== -->
     <section class="about">
       <div class="container">
-        <h2 class="section-title reveal">About Me</h2>
+        <h2 class="section-title">About Me</h2>
 
         <!-- Row 1 — Personal Life -->
         <div class="about__section about__grid">
-          <div class="about__section-left reveal-left">
+          <div class="about__section-left">
             <h3 class="about__section-title">Personal Life</h3>
             <p class="about__section-description">
               Lorem Ipsum Stuff there are stuff here, placeholder text, yada
@@ -140,7 +120,7 @@
               coding :>
             </p>
           </div>
-          <div class="about__section-right reveal-right">
+          <div class="about__section-right">
             <div class="about__image-scroller">
               <div class="scroller__strip">
                 <img src="./assets/about/about-1-1.jpg" alt="Photo 1" />
@@ -154,7 +134,7 @@
 
         <!-- Row 2 — Inspirations (inverted) -->
         <div class="about__section about__grid about__grid--inverted">
-          <div class="about__section-right reveal-left">
+          <div class="about__section-right">
             <div class="about__image-scroller">
               <div class="scroller__strip">
                 <img src="./assets/about/about-3-1.png" alt="Photo 1" />
@@ -164,7 +144,7 @@
               </div>
             </div>
           </div>
-          <div class="about__section-left reveal-right">
+          <div class="about__section-left">
             <h3 class="about__section-title">Inspirations</h3>
             <p class="about__section-description">
               Lorem Ipsum Stuff there are stuff here, placeholder text, yada
@@ -177,7 +157,7 @@
 
         <!-- Row 3 — Interests -->
         <div class="about__section about__grid">
-          <div class="about__section-left reveal-left">
+          <div class="about__section-left">
             <h3 class="about__section-title">Interests</h3>
             <p class="about__section-description">
               Lorem Ipsum Stuff there are stuff here, placeholder text, yada
@@ -186,7 +166,7 @@
               coding :>
             </p>
           </div>
-          <div class="about__section-right reveal-right">
+          <div class="about__section-right">
             <div class="about__image-scroller">
               <div class="scroller__strip">
                 <img src="./assets/about/about-2-1.jpg" />
@@ -200,21 +180,16 @@
       </div>
     </section>
 
-    <!-- =====================================================
-         PROJECTS
-         Animations: title + subtitle fade up, cards stagger
-         scale-in from below (reveal-scale + reveal-stagger)
-         ===================================================== -->
     <section class="projects">
       <div class="container">
-        <h2 class="section-title reveal">My Projects</h2>
-        <p class="projects__subtitle reveal">
+        <h2 class="section-title">My Projects</h2>
+        <p class="projects__subtitle">
           As a Student I've made some projects as per school requirements, and
           side projects.
         </p>
 
-        <div class="projects__grid reveal-stagger">
-          <div class="projects__card reveal-scale">
+        <div class="projects__grid">
+          <div class="projects__card">
             <img
               src="./assets/projects/project-1.png"
               alt="ProjectImage"
@@ -233,7 +208,7 @@
               </a>
             </div>
           </div>
-          <div class="projects__card reveal-scale">
+          <div class="projects__card">
             <img
               src="./assets/projects/project-2.png"
               alt="ProjectImage"
@@ -252,7 +227,7 @@
               </a>
             </div>
           </div>
-          <div class="projects__card reveal-scale">
+          <div class="projects__card">
             <img
               src="./assets/projects/project-3.png"
               alt="ProjectImage"
@@ -270,7 +245,7 @@
               >
             </div>
           </div>
-          <div class="projects__card reveal-scale">
+          <div class="projects__card">
             <img
               src="./assets/projects/project-4.png"
               alt="ProjectImage"
@@ -288,7 +263,7 @@
               >
             </div>
           </div>
-          <div class="projects__card reveal-scale">
+          <div class="projects__card">
             <img
               src="./assets/projects/project-5.png"
               alt="ProjectImage"
@@ -317,103 +292,103 @@
          ===================================================== -->
     <section class="skills">
       <div class="container">
-        <h2 class="section-title reveal">Skills & Technologies</h2>
-        <p class="section-description reveal">
+        <h2 class="section-title">Skills & Technologies</h2>
+        <p class="section-description">
           Some of the Tools, Programming Languages, and Frameworks I'm currently
           using and/or learning.
         </p>
 
-        <!-- reveal-stagger on the grid triggers staggered delays per item -->
-        <div class="skills__grid reveal-stagger">
-          <div class="skills__item reveal-scale">
+        <!--  on the grid triggers staggered delays per item -->
+        <div class="skills__grid">
+          <div class="skills__item">
             <div class="skills__item-icon">
               <i class="fa-brands fa-html5"></i>
             </div>
             <span class="skills__item-skill"> HTML </span>
           </div>
-          <div class="skills__item reveal-scale">
+          <div class="skills__item">
             <div class="skills__item-icon">
               <i class="fa-brands fa-css3-alt"></i>
             </div>
             <span class="skills__item-skill"> CSS </span>
           </div>
-          <div class="skills__item reveal-scale">
+          <div class="skills__item">
             <div class="skills__item-icon"><i class="fa-brands fa-js"></i></div>
             <span class="skills__item-skill"> JavaScript </span>
           </div>
-          <div class="skills__item reveal-scale">
+          <div class="skills__item">
             <div class="skills__item-icon">
               <i class="devicon-typescript-plain"></i>
             </div>
             <span class="skills__item-skill"> TypeScript </span>
           </div>
-          <div class="skills__item reveal-scale">
+          <div class="skills__item">
             <div class="skills__item-icon">
               <i class="fa-brands fa-react"></i>
             </div>
             <span class="skills__item-skill"> React/React.TS </span>
           </div>
-          <div class="skills__item reveal-scale">
+          <div class="skills__item">
             <div class="skills__item-icon">
               <i class="fa-brands fa-java"></i>
             </div>
             <span class="skills__item-skill"> Java </span>
           </div>
-          <div class="skills__item reveal-scale">
+          <div class="skills__item">
             <div class="skills__item-icon">
               <i class="devicon-csharp-plain"></i>
             </div>
             <span class="skills__item-skill"> C# </span>
           </div>
-          <div class="skills__item reveal-scale">
+          <div class="skills__item">
             <div class="skills__item-icon">
               <i class="fa-solid fa-mobile-screen"></i>
             </div>
             <span class="skills__item-skill"> MAUI </span>
           </div>
-          <div class="skills__item reveal-scale">
+          <div class="skills__item">
             <div class="skills__item-icon">
               <i class="fa-solid fa-database"></i>
             </div>
             <span class="skills__item-skill"> MySQL </span>
           </div>
-          <div class="skills__item reveal-scale">
+          <div class="skills__item">
             <div class="skills__item-icon">
               <i class="fa-solid fa-database"></i>
             </div>
             <span class="skills__item-skill"> SQLite </span>
           </div>
-          <div class="skills__item reveal-scale">
+          <div class="skills__item">
             <div class="skills__item-icon">
               <i class="devicon-postgresql-plain"></i>
             </div>
             <span class="skills__item-skill"> PostgreSQL </span>
           </div>
-          <div class="skills__item reveal-scale">
+          <div class="skills__item">
             <div class="skills__item-icon">
               <i class="fa-solid fa-layer-group"></i>
             </div>
             <span class="skills__item-skill"> EntityFramework Core </span>
           </div>
-          <div class="skills__item reveal-scale">
+          <div class="skills__item">
             <div class="skills__item-icon">
               <i class="fa-brands fa-git-alt"></i>
             </div>
             <span class="skills__item-skill"> Git </span>
           </div>
-          <div class="skills__item reveal-scale">
+          <div class="skills__item">
             <div class="skills__item-icon">
               <i class="fa-brands fa-github"></i>
             </div>
             <span class="skills__item-skill"> GitHub </span>
           </div>
-          <div class="skills__item reveal-scale">
+          <div class="skills__item">
             <div class="skills__item-icon">
               <i class="fa-solid fa-play"></i>
             </div>
             <span class="skills__item-skill"> Vercel </span>
           </div>
-          <div class="skills__item reveal-scale">
+          <div class="skills__item">
             <div class="skills__item-icon">
               <i class="fa-solid fa-train-subway"></i>
             </div>
@@ -429,11 +404,11 @@
          ===================================================== -->
     <section class="contact">
       <div class="container">
-        <h2 class="section-title reveal">I Would Love to work with you!</h2>
-        <p class="section-description reveal">
+        <h2 class="section-title">I Would Love to work with you!</h2>
+        <p class="section-description">
           Let's learn and build something together.
         </p>
-        <a href="#" class="contact__button reveal">CONTACT ME</a>
+        <a href="#" class="contact__button">CONTACT ME</a>
       </div>
     </section>
 
@@ -444,7 +419,7 @@
     <footer class="footer">
       <div class="container">
         <div class="footer__grid">
-          <div class="footer__col footer__col--left reveal">
+          <div class="footer__col footer__col--left">
             <ul class="footer__contact">
               <li>
                 <i class="fa-solid fa-envelope"></i>
@@ -464,7 +439,7 @@
             </ul>
           </div>
           <div
-            class="footer__col footer__col--center reveal"
+            class="footer__col footer__col--center"
             style="transition-delay: 0.15s"
           >
             <p class="footer__copyright">
@@ -473,7 +448,7 @@
             <p class="footer__credit">Designed & Built by Bryne Loteria</p>
           </div>
           <div
-            class="footer__col footer__col--right reveal"
+            class="footer__col footer__col--right"
             style="transition-delay: 0.3s"
           >
             <div class="socials-container">
