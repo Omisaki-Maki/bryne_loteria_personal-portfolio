@@ -1,0 +1,495 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Projects - Bryne Loteria's Portfolio" />
+    <link
+      rel="shortcut icon"
+      href="./assets/loteria_logo.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
+    <title>Loteria De Portfolio - Projects</title>
+  </head>
+  <body>
+    <!-- BACKGROUND ANIMATION -->
+    <div class="aurora" aria-hidden="true">
+      <div class="aurora__line aurora__line--1"></div>
+      <div class="aurora__line aurora__line--2"></div>
+      <div class="aurora__line aurora__line--3"></div>
+      <div class="aurora__shape aurora__shape--1"></div>
+      <div class="aurora__shape aurora__shape--2"></div>
+      <div class="aurora__shape aurora__shape--3"></div>
+      <div class="aurora__shape aurora__shape--4"></div>
+      <div class="aurora__shape aurora__shape--5"></div>
+      <div class="aurora__blob aurora__blob--1"></div>
+      <div class="aurora__blob aurora__blob--2"></div>
+    </div>
+
+    <!-- HEADER -->
+    <header class="header">
+      <div class="container">
+        <nav>
+          <a href="#" class="header__logo">
+            <img
+              src="./assets/loteria_logo.png"
+              alt="Logo"
+              class="header__logo-icon"
+            />
+            Loteria De Portfolio
+          </a>
+          <ul class="header__nav-links" id="navLinks">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./projects.html">Projects</a></li>
+            <li><a href="./skills.html">Skills</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+          </ul>
+          <div class="header__burger" id="burger">
+            <span></span><span></span><span></span>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- PROJECTS PAGE -->
+    <main class="projectsPage">
+      <div class="container">
+        <!-- Header -->
+        <div class="projectsPage__header">
+          <h1 class="section-title">My Projects</h1>
+          <div class="projectsPage__divider"></div>
+          <p class="section-description">
+            A collection of school requirements and side projects I've built —
+            hover a card to see more, or click for full details.
+          </p>
+        </div>
+
+        <!-- Masonry Grid -->
+        <div class="projectsPage__masonry" id="masonryGrid">
+          <!-- ── PROJECT 1 — FEATURED ── -->
+          <div class="flip-card flip-card--featured" data-project="0">
+            <div class="flip-card__inner">
+              <!-- Front -->
+              <div class="flip-card__front">
+                <img
+                  src="./assets/projects/project-1.png"
+                  alt="CodieLing"
+                  class="flip-card__front-image"
+                  style="height: 260px"
+                />
+                <div class="flip-card__front-body">
+                  <div class="flip-card__badges">
+                    <span class="flip-card__badge flip-card__badge--school"
+                      >SCHOOL</span
+                    >
+                  </div>
+                  <h3 class="flip-card__title">CodieLing</h3>
+                  <div class="flip-card__meta">
+                    <span><i class="fa-solid fa-calendar-days"></i> 2026</span>
+                    <span><i class="fa-solid fa-user"></i> Team Lead</span>
+                  </div>
+                  <div class="flip-card__stack">
+                    <span class="flip-card__tag">React</span>
+                    <span class="flip-card__tag">TypeScript</span>
+                    <span class="flip-card__tag">C#</span>
+                    <span class="flip-card__tag">PostgresSQL</span>
+                    <span class="flip-card__tag">Vercel</span>
+                    <span class="flip-card__tag">Railway</span>
+                  </div>
+                  <p class="flip-card__hint">
+                    <i class="fa-solid fa-rotate"></i> Hover to flip
+                  </p>
+                </div>
+              </div>
+              <!-- Back -->
+              <div class="flip-card__back">
+                <div>
+                  <h3 class="flip-card__back-title">CodieLing</h3>
+                  <p class="flip-card__back-desc">
+                    A side project built with React and TypeScript. Designed and
+                    developed independently — deployed live on Vercel with
+                    automatic CI/CD from GitHub.
+                  </p>
+                </div>
+                <div class="flip-card__back-actions">
+                  <a
+                    href="https://codieling.vercel.app"
+                    target="_blank"
+                    rel="noopener"
+                    class="flip-card__btn flip-card__btn--live"
+                  >
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i> Live
+                  </a>
+                  <button
+                    class="flip-card__btn flip-card__btn--details"
+                    onclick="
+                      openModal(0);
+                      event.stopPropagation();
+                    "
+                  >
+                    <i class="fa-solid fa-circle-info"></i> Details
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ── PROJECT 2 ── -->
+          <div class="flip-card" data-project="1">
+            <div class="flip-card__inner">
+              <div class="flip-card__front">
+                <img
+                  src="./assets/projects/project-2.png"
+                  alt="Catan Maki Generator"
+                  class="flip-card__front-image"
+                />
+                <div class="flip-card__front-body">
+                  <div class="flip-card__badges">
+                    <span class="flip-card__badge flip-card__badge--side"
+                      >Side Project</span
+                    >
+                  </div>
+                  <h3 class="flip-card__title">Catan Random Map Generator</h3>
+                  <div class="flip-card__meta">
+                    <span><i class="fa-solid fa-calendar-days"></i> 2026</span>
+                    <span><i class="fa-solid fa-user"></i> Solo</span>
+                  </div>
+                  <div class="flip-card__stack">
+                    <span class="flip-card__tag">React</span>
+                    <span class="flip-card__tag">C#</span>
+                    <span class="flip-card__tag">Railway</span>
+                    <span class="flip-card__tag">Vercel</span>
+                  </div>
+                  <p class="flip-card__hint">
+                    <i class="fa-solid fa-rotate"></i> Hover to flip
+                  </p>
+                </div>
+              </div>
+              <div class="flip-card__back">
+                <div>
+                  <h3 class="flip-card__back-title">
+                    Catan Random Map Generator
+                  </h3>
+                  <p class="flip-card__back-desc">
+                    A fun tool for generating Catan board setups with a fresh
+                    visual style. Built as a personal side project and deployed
+                    on Vercel.
+                  </p>
+                </div>
+                <div class="flip-card__back-actions">
+                  <a
+                    href="https://catan-maki-generator.vercel.app"
+                    target="_blank"
+                    rel="noopener"
+                    class="flip-card__btn flip-card__btn--live"
+                  >
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i> Live
+                  </a>
+                  <button
+                    class="flip-card__btn flip-card__btn--details"
+                    onclick="
+                      openModal(1);
+                      event.stopPropagation();
+                    "
+                  >
+                    <i class="fa-solid fa-circle-info"></i> Details
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ── PROJECT 3 ── -->
+          <div class="flip-card" data-project="2">
+            <div class="flip-card__inner">
+              <div class="flip-card__front">
+                <img
+                  src="./assets/projects/project-3.png"
+                  alt="Room Reservation System"
+                  class="flip-card__front-image"
+                />
+                <div class="flip-card__front-body">
+                  <div class="flip-card__badges">
+                    <span class="flip-card__badge flip-card__badge--school"
+                      >School</span
+                    >
+                  </div>
+                  <h3 class="flip-card__title">Room Reservation System</h3>
+                  <div class="flip-card__meta">
+                    <span><i class="fa-solid fa-calendar-days"></i> 2025</span>
+                    <span><i class="fa-solid fa-users"></i> Team Lead</span>
+                  </div>
+                  <div class="flip-card__stack">
+                    <span class="flip-card__tag">C#</span>
+                    <span class="flip-card__tag">SQLite</span>
+                  </div>
+                  <p class="flip-card__hint">
+                    <i class="fa-solid fa-rotate"></i> Hover to flip
+                  </p>
+                </div>
+              </div>
+              <div class="flip-card__back">
+                <div>
+                  <h3 class="flip-card__back-title">Room Reservation System</h3>
+                  <p class="flip-card__back-desc">
+                    A school requirement built in C# and SQLite backend. Managed
+                    the team and led development of the reservation and admin
+                    modules.
+                  </p>
+                </div>
+                <div class="flip-card__back-actions">
+                  <a
+                    href="https://github.com/Omisaki-Maki/RoomReservationSystem-ILS"
+                    target="_blank"
+                    rel="noopener"
+                    class="flip-card__btn flip-card__btn--github"
+                  >
+                    <i class="fa-brands fa-github"></i> GitHub
+                  </a>
+                  <button
+                    class="flip-card__btn flip-card__btn--details"
+                    onclick="
+                      openModal(2);
+                      event.stopPropagation();
+                    "
+                  >
+                    <i class="fa-solid fa-circle-info"></i> Details
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ── PROJECT 4 ── -->
+          <div class="flip-card" data-project="3">
+            <div class="flip-card__inner">
+              <div class="flip-card__front">
+                <img
+                  src="./assets/projects/project-4.png"
+                  alt="Attendance System"
+                  class="flip-card__front-image"
+                />
+                <div class="flip-card__front-body">
+                  <div class="flip-card__badges">
+                    <span class="flip-card__badge flip-card__badge--school"
+                      >School</span
+                    >
+                  </div>
+                  <h3 class="flip-card__title">Attendance System</h3>
+                  <div class="flip-card__meta">
+                    <span><i class="fa-solid fa-calendar-days"></i> 2025</span>
+                    <span><i class="fa-solid fa-user"></i> Solo</span>
+                  </div>
+                  <div class="flip-card__stack">
+                    <span class="flip-card__tag">C#</span>
+                    <span class="flip-card__tag">SQLite</span>
+                    <span class="flip-card__tag">Entity Framework</span>
+                  </div>
+                  <p class="flip-card__hint">
+                    <i class="fa-solid fa-rotate"></i> Hover to flip
+                  </p>
+                </div>
+              </div>
+              <div class="flip-card__back">
+                <div>
+                  <h3 class="flip-card__back-title">Attendance System</h3>
+                  <p class="flip-card__back-desc">
+                    A desktop attendance management system built for a school
+                    requirement. Features student tracking, reporting, and data
+                    export using C# with EF Core.
+                  </p>
+                </div>
+                <div class="flip-card__back-actions">
+                  <a
+                    href="https://github.com/Omisaki-Maki/COMPRG3-ATTENDANCE_SYSTEM-ILS"
+                    target="_blank"
+                    rel="noopener"
+                    class="flip-card__btn flip-card__btn--github"
+                  >
+                    <i class="fa-brands fa-github"></i> GitHub
+                  </a>
+                  <button
+                    class="flip-card__btn flip-card__btn--details"
+                    onclick="
+                      openModal(3);
+                      event.stopPropagation();
+                    "
+                  >
+                    <i class="fa-solid fa-circle-info"></i> Details
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ── PROJECT 5 — FEATURED ── -->
+          <div class="flip-card flip-card--featured" data-project="4">
+            <div class="flip-card__inner">
+              <div class="flip-card__front">
+                <img
+                  src="./assets/projects/project-5.png"
+                  alt="Turn Based Game"
+                  class="flip-card__front-image"
+                  style="height: 260px"
+                />
+                <div class="flip-card__front-body">
+                  <div class="flip-card__badges">
+                    <span class="flip-card__badge flip-card__badge--school"
+                      >School</span
+                    >
+                  </div>
+                  <h3 class="flip-card__title">Turn Based Game</h3>
+                  <div class="flip-card__meta">
+                    <span><i class="fa-solid fa-calendar-days"></i> 2024</span>
+                    <span><i class="fa-solid fa-user"></i> Solo</span>
+                  </div>
+                  <div class="flip-card__stack">
+                    <span class="flip-card__tag">C#</span>
+                    <span class="flip-card__tag">EF Core</span>
+                    <span class="flip-card__tag">SQLite</span>
+                    <span class="flip-card__tag">OOP</span>
+                  </div>
+                  <p class="flip-card__hint">
+                    <i class="fa-solid fa-rotate"></i> Hover to flip
+                  </p>
+                </div>
+              </div>
+              <div class="flip-card__back">
+                <div>
+                  <h3 class="flip-card__back-title">Turn Based Game</h3>
+                  <p class="flip-card__back-desc">
+                    A console-based turn-based RPG game built as a school
+                    project to demonstrate OOP concepts — classes, inheritance,
+                    polymorphism, and game loop logic.
+                  </p>
+                </div>
+                <div class="flip-card__back-actions">
+                  <a
+                    href="https://github.com/Omisaki-Maki/TurnBasedGame"
+                    target="_blank"
+                    rel="noopener"
+                    class="flip-card__btn flip-card__btn--github"
+                  >
+                    <i class="fa-brands fa-github"></i> GitHub
+                  </a>
+                  <button
+                    class="flip-card__btn flip-card__btn--details"
+                    onclick="
+                      openModal(4);
+                      event.stopPropagation();
+                    "
+                  >
+                    <i class="fa-solid fa-circle-info"></i> Details
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /masonry -->
+      </div>
+      <!-- /container -->
+    </main>
+
+    <!-- ── MODAL ── -->
+    <div
+      class="modal-backdrop"
+      id="modalBackdrop"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modalTitle"
+    >
+      <div class="modal" id="modal">
+        <button class="modal__close" id="modalClose" aria-label="Close modal">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="modal__hero">
+          <img id="modalImg" src="" alt="" />
+          <div class="modal__hero-overlay"></div>
+        </div>
+        <div class="modal__body">
+          <div class="modal__top">
+            <h2 class="modal__title" id="modalTitle"></h2>
+            <div class="modal__badges" id="modalBadges"></div>
+          </div>
+          <div class="modal__meta-row" id="modalMeta"></div>
+          <div>
+            <p class="modal__section-label">About This Project</p>
+            <p class="modal__desc" id="modalDesc"></p>
+          </div>
+          <div>
+            <p class="modal__section-label">Tech Stack</p>
+            <div class="modal__stack" id="modalStack"></div>
+          </div>
+          <div class="modal__actions" id="modalActions"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTACT -->
+    <section class="contact">
+      <div class="container">
+        <h2 class="section-title">I Would Love to work with you!</h2>
+        <p class="section-description">
+          Let's learn and build something together.
+        </p>
+        <a href="./contact.html" class="contact__button">CONTACT ME</a>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__grid">
+          <div class="footer__col footer__col--left">
+            <ul class="footer__contact">
+              <li>
+                <i class="fa-solid fa-envelope"></i
+                ><a href="mailto:mckycenloteria@gmail.com"
+                  >mckycenloteria@gmail.com</a
+                >
+              </li>
+              <li>
+                <i class="fa-solid fa-phone"></i
+                ><a href="tel:+639173251501">+63 917 325 1501</a>
+              </li>
+              <li>
+                <i class="fa-solid fa-location-dot"></i
+                ><span
+                  >Blk 8 Lot 11, LynVille Homes Brgy. Del Remedio San Pablo
+                  city, Laguna, Philippines</span
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="footer__col footer__col--center">
+            <p class="footer__copyright">
+              © 2026 Loteria De Portfolio. All rights reserved.
+            </p>
+            <p class="footer__credit">Designed & Built by Bryne Loteria</p>
+          </div>
+          <div class="footer__col footer__col--right">
+            <div class="socials-container">
+              <a href="#"><i class="fa-brands fa-github"></i></a>
+              <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+              <a href="#"><i class="fa-brands fa-facebook"></i></a>
+              <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

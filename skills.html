@@ -1,0 +1,496 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Creative Visual Designs (CVD) is a platform for showcasing creative projects and visual designs"
+    />
+    <link
+      rel="shortcut icon"
+      href="./assets/loteria_logo.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
+    <title>Creative Visual Designs - Home</title>
+  </head>
+  <body>
+    <!-- BACKGROUND ANIMATION -->
+    <div class="aurora" aria-hidden="true">
+      <div class="aurora__line aurora__line--1"></div>
+      <div class="aurora__line aurora__line--2"></div>
+      <div class="aurora__line aurora__line--3"></div>
+      <div class="aurora__shape aurora__shape--1"></div>
+      <div class="aurora__shape aurora__shape--2"></div>
+      <div class="aurora__shape aurora__shape--3"></div>
+      <div class="aurora__shape aurora__shape--4"></div>
+      <div class="aurora__shape aurora__shape--5"></div>
+      <div class="aurora__blob aurora__blob--1"></div>
+      <div class="aurora__blob aurora__blob--2"></div>
+    </div>
+
+    <!-- HEADER -->
+    <header class="header">
+      <div class="container">
+        <nav>
+          <a href="#" class="header__logo">
+            <img
+              src="./assets/loteria_logo.png"
+              alt="Logo"
+              class="header__logo-icon"
+            />
+            Loteria De Portfolio</a
+          >
+          <ul class="header__nav-links" id="navLinks">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./projects.html">Projects</a></li>
+            <li><a href="./skills.html">Skills</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+          </ul>
+          <div class="header__burger" id="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- SKILLS PAGE -->
+    <main class="skillsPage">
+      <div class="container">
+        <div class="skillsPage__header">
+          <h1 class="section-title">Skills & Technologies</h1>
+          <p class="section-description">
+            A self-rated breakdown of the tools, languages, and frameworks I use
+            — and how I've used them.
+          </p>
+        </div>
+
+        <!-- ── FRONTEND ── -->
+        <div class="skillsPage__category">
+          <div class="skillsPage__category-header">
+            <i class="fa-solid fa-paintbrush skillsPage__category-icon"></i>
+            <h2 class="skillsPage__category-title">Frontend</h2>
+          </div>
+          <div class="skillsPage__grid">
+            <div class="skill-card">
+              <div class="skill-card__icon-wrap">
+                <i class="fa-brands fa-html5"></i>
+              </div>
+              <h3 class="skill-card__name">HTML</h3>
+              <p class="skill-card__desc">
+                Used for structuring all web pages and projects across school
+                and side projects.
+              </p>
+              <div class="skill-card__bar-wrap">
+                <div class="skill-card__bar-label">
+                  <span>Proficiency</span>
+                  <span>90%</span>
+                </div>
+                <div class="skill-card__bar-track">
+                  <div class="skill-card__bar-fill" style="--pct: 90%"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="skill-card">
+              <div class="skill-card__icon-wrap">
+                <i class="fa-brands fa-css3-alt"></i>
+              </div>
+              <h3 class="skill-card__name">CSS</h3>
+              <p class="skill-card__desc">
+                Styled all personal and school projects; comfortable with
+                layouts, animations, and responsive design.
+              </p>
+              <div class="skill-card__bar-wrap">
+                <div class="skill-card__bar-label">
+                  <span>Proficiency</span>
+                  <span>85%</span>
+                </div>
+                <div class="skill-card__bar-track">
+                  <div class="skill-card__bar-fill" style="--pct: 85%"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="skill-card">
+              <div class="skill-card__icon-wrap">
+                <i class="fa-brands fa-js"></i>
+              </div>
+              <h3 class="skill-card__name">JavaScript</h3>
+              <p class="skill-card__desc">
+                Used for DOM manipulation, event handling, and interactivity in
+                web projects.
+              </p>
+              <div class="skill-card__bar-wrap">
+                <div class="skill-card__bar-label">
+                  <span>Proficiency</span>
+                  <span>75%</span>
+                </div>
+                <div class="skill-card__bar-track">
+                  <div class="skill-card__bar-fill" style="--pct: 75%"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="skill-card">
+              <div class="skill-card__icon-wrap">
+                <i class="devicon-typescript-plain"></i>
+              </div>
+              <h3 class="skill-card__name">TypeScript</h3>
+              <p class="skill-card__desc">
+                Used alongside React for type-safe component development in side
+                projects.
+              </p>
+              <div class="skill-card__bar-wrap">
+                <div class="skill-card__bar-label">
+                  <span>Proficiency</span>
+                  <span>65%</span>
+                </div>
+                <div class="skill-card__bar-track">
+                  <div class="skill-card__bar-fill" style="--pct: 65%"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="skill-card">
+              <div class="skill-card__icon-wrap">
+                <i class="fa-brands fa-react"></i>
+              </div>
+              <h3 class="skill-card__name">React / React TS</h3>
+              <p class="skill-card__desc">
+                Built component-driven side projects with hooks, state
+                management, and routing.
+              </p>
+              <div class="skill-card__bar-wrap">
+                <div class="skill-card__bar-label">
+                  <span>Proficiency</span>
+                  <span>70%</span>
+                </div>
+                <div class="skill-card__bar-track">
+                  <div class="skill-card__bar-fill" style="--pct: 70%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── BACKEND / LANGUAGES ── -->
+        <div class="skillsPage__category">
+          <div class="skillsPage__category-header">
+            <i class="fa-solid fa-code skillsPage__category-icon"></i>
+            <h2 class="skillsPage__category-title">Backend / Languages</h2>
+          </div>
+          <div class="skillsPage__grid">
+            <div class="skill-card">
+              <div class="skill-card__icon-wrap">
+                <i class="fa-brands fa-java"></i>
+              </div>
+              <h3 class="skill-card__name">Java</h3>
+              <p class="skill-card__desc">
+                Used in school for OOP concepts, data structures, and
+                console-based applications.
+              </p>
+              <div class="skill-card__bar-wrap">
+                <div class="skill-card__bar-label">
+                  <span>Proficiency</span>
+                  <span>65%</span>
+                </div>
+                <div class="skill-card__bar-track">
+                  <div class="skill-card__bar-fill" style="--pct: 65%"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="skill-card">
+              <div class="skill-card__icon-wrap">
+                <i class="devicon-csharp-plain"></i>
+              </div>
+              <h3 class="skill-card__name">C#</h3>
+              <p class="skill-card__desc">
+                Primary language for school projects including desktop apps and
+                turn-based games.
+              </p>
+              <div class="skill-card__bar-wrap">
+                <div class="skill-card__bar-label">
+                  <span>Proficiency</span>
+                  <span>72%</span>
+                </div>
+                <div class="skill-card__bar-track">
+                  <div class="skill-card__bar-fill" style="--pct: 72%"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="skill-card">
+              <div class="skill-card__icon-wrap">
+                <i class="fa-solid fa-mobile-screen"></i>
+              </div>
+              <h3 class="skill-card__name">.NET MAUI</h3>
+              <p class="skill-card__desc">
+                Built cross-platform mobile apps for school requirements using
+                C# and MAUI.
+              </p>
+              <div class="skill-card__bar-wrap">
+                <div class="skill-card__bar-label">
+                  <span>Proficiency</span>
+                  <span>60%</span>
+                </div>
+                <div class="skill-card__bar-track">
+                  <div class="skill-card__bar-fill" style="--pct: 60%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── DATABASES ── -->
+        <div class="skillsPage__category">
+          <div class="skillsPage__category-header">
+            <i class="fa-solid fa-database skillsPage__category-icon"></i>
+            <h2 class="skillsPage__category-title">Databases</h2>
+          </div>
+          <div class="skillsPage__grid">
+            <div class="skill-card">
+              <div class="skill-card__icon-wrap">
+                <i class="fa-solid fa-database"></i>
+              </div>
+              <h3 class="skill-card__name">MySQL</h3>
+              <p class="skill-card__desc">
+                Used for relational data management in school-required web and
+                desktop projects.
+              </p>
+              <div class="skill-card__bar-wrap">
+                <div class="skill-card__bar-label">
+                  <span>Proficiency</span>
+                  <span>70%</span>
+                </div>
+                <div class="skill-card__bar-track">
+                  <div class="skill-card__bar-fill" style="--pct: 70%"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="skill-card">
+              <div class="skill-card__icon-wrap">
+                <i class="fa-solid fa-database"></i>
+              </div>
+              <h3 class="skill-card__name">SQLite</h3>
+              <p class="skill-card__desc">
+                Embedded in MAUI apps for lightweight local data storage.
+              </p>
+              <div class="skill-card__bar-wrap">
+                <div class="skill-card__bar-label">
+                  <span>Proficiency</span>
+                  <span>65%</span>
+                </div>
+                <div class="skill-card__bar-track">
+                  <div class="skill-card__bar-fill" style="--pct: 65%"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="skill-card">
+              <div class="skill-card__icon-wrap">
+                <i class="devicon-postgresql-plain"></i>
+              </div>
+              <h3 class="skill-card__name">PostgreSQL</h3>
+              <p class="skill-card__desc">
+                Used with Railway deployments for production-grade relational
+                databases.
+              </p>
+              <div class="skill-card__bar-wrap">
+                <div class="skill-card__bar-label">
+                  <span>Proficiency</span>
+                  <span>60%</span>
+                </div>
+                <div class="skill-card__bar-track">
+                  <div class="skill-card__bar-fill" style="--pct: 60%"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="skill-card">
+              <div class="skill-card__icon-wrap">
+                <i class="fa-solid fa-layer-group"></i>
+              </div>
+              <h3 class="skill-card__name">Entity Framework Core</h3>
+              <p class="skill-card__desc">
+                Used as ORM in C# projects to manage database migrations and
+                queries.
+              </p>
+              <div class="skill-card__bar-wrap">
+                <div class="skill-card__bar-label">
+                  <span>Proficiency</span>
+                  <span>62%</span>
+                </div>
+                <div class="skill-card__bar-track">
+                  <div class="skill-card__bar-fill" style="--pct: 62%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── TOOLS & DEVOPS ── -->
+        <div class="skillsPage__category">
+          <div class="skillsPage__category-header">
+            <i class="fa-solid fa-wrench skillsPage__category-icon"></i>
+            <h2 class="skillsPage__category-title">Tools & DevOps</h2>
+          </div>
+          <div class="skillsPage__grid">
+            <div class="skill-card">
+              <div class="skill-card__icon-wrap">
+                <i class="fa-brands fa-git-alt"></i>
+              </div>
+              <h3 class="skill-card__name">Git</h3>
+              <p class="skill-card__desc">
+                Used for version control across all projects, branching and
+                committing regularly.
+              </p>
+              <div class="skill-card__bar-wrap">
+                <div class="skill-card__bar-label">
+                  <span>Proficiency</span>
+                  <span>78%</span>
+                </div>
+                <div class="skill-card__bar-track">
+                  <div class="skill-card__bar-fill" style="--pct: 78%"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="skill-card">
+              <div class="skill-card__icon-wrap">
+                <i class="fa-brands fa-github"></i>
+              </div>
+              <h3 class="skill-card__name">GitHub</h3>
+              <p class="skill-card__desc">
+                Hosts all my project repositories, used for collaboration and
+                project showcasing.
+              </p>
+              <div class="skill-card__bar-wrap">
+                <div class="skill-card__bar-label">
+                  <span>Proficiency</span>
+                  <span>80%</span>
+                </div>
+                <div class="skill-card__bar-track">
+                  <div class="skill-card__bar-fill" style="--pct: 80%"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="skill-card">
+              <div class="skill-card__icon-wrap">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <h3 class="skill-card__name">Vercel</h3>
+              <p class="skill-card__desc">
+                Deployed multiple frontend side projects with automatic CI/CD
+                from GitHub.
+              </p>
+              <div class="skill-card__bar-wrap">
+                <div class="skill-card__bar-label">
+                  <span>Proficiency</span>
+                  <span>75%</span>
+                </div>
+                <div class="skill-card__bar-track">
+                  <div class="skill-card__bar-fill" style="--pct: 75%"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="skill-card">
+              <div class="skill-card__icon-wrap">
+                <i class="fa-solid fa-train-subway"></i>
+              </div>
+              <h3 class="skill-card__name">Railway</h3>
+              <p class="skill-card__desc">
+                Used to host backend services and PostgreSQL databases for
+                deployed projects.
+              </p>
+              <div class="skill-card__bar-wrap">
+                <div class="skill-card__bar-label">
+                  <span>Proficiency</span>
+                  <span>65%</span>
+                </div>
+                <div class="skill-card__bar-track">
+                  <div class="skill-card__bar-fill" style="--pct: 65%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- CONTACT -->
+
+    <section class="contact">
+      <div class="container">
+        <h2 class="section-title">I Would Love to work with you!</h2>
+        <p class="section-description">
+          Let's learn and build something together.
+        </p>
+        <a href="#" class="contact__button">CONTACT ME</a>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__grid">
+          <div class="footer__col footer__col--left">
+            <ul class="footer__contact">
+              <li>
+                <i class="fa-solid fa-envelope"></i>
+                <a href="mailto:you@email.com">mckycenloteria@gmail.com</a>
+              </li>
+              <li>
+                <i class="fa-solid fa-phone"></i>
+                <a href="tel:+1234567890">+63 917 325 1501</a>
+              </li>
+              <li>
+                <i class="fa-solid fa-location-dot"></i>
+                <span
+                  >Blk 8 Lot 11, LynVille Homes Brgy. Del Remedio San Pablo
+                  city, Laguna, Philippines</span
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="footer__col footer__col--center">
+            <p class="footer__copyright">
+              © 2026 Loteria De Portfolio. All rights reserved.
+            </p>
+            <p class="footer__credit">Designed & Built by Bryne Loteria</p>
+          </div>
+          <div class="footer__col footer__col--right">
+            <div class="socials-container">
+              <a href="#"><i class="fa-brands fa-github"></i></a>
+              <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+              <a href="#"><i class="fa-brands fa-facebook"></i></a>
+              <a href="#" class="socials__button">
+                <i class="fa-brands fa-x-twitter"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- SCRIPT -->
+    <script src="./script.js"></script>
+  </body>
+</html>
