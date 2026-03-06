@@ -5,10 +5,50 @@
 /* ── Burger Menu ── */
 const burger = document.getElementById("burger");
 const navLinks = document.getElementById("navLinks");
-burger.addEventListener("click", () => {
-  burger.classList.toggle("active");
-  navLinks.classList.toggle("active");
-});
+if (burger) {
+  burger.addEventListener("click", () => {
+    burger.classList.toggle("active");
+    navLinks.classList.toggle("active");
+  });
+}
+
+/* ============================================================
+   SCROLL ANIMATIONS — IntersectionObserver
+   Watches all elements with reveal-* classes and adds
+   .is-visible when they enter the viewport.
+   ============================================================ */
+
+(function () {
+  const SELECTORS =
+    ".reveal, .reveal-left, .reveal-right, .reveal-scale, .reveal-stagger";
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.15,
+      rootMargin: "0px 0px -80px 0px",
+    },
+  );
+
+  setTimeout(() => {
+    document.querySelectorAll(SELECTORS).forEach((el) => {
+      const rect = el.getBoundingClientRect();
+      const alreadyVisible = rect.top < window.innerHeight && rect.bottom > 0;
+      if (alreadyVisible) {
+        el.classList.add("is-visible"); // no animation, just show it
+      } else {
+        observer.observe(el); // animate on scroll
+      }
+    });
+  }, 100);
+})();
 
 /* ============================================================
    PROJECTS PAGE — Modal Data & Logic
