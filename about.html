@@ -3,7 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="My Personal Portfolio" />
+    <meta
+      name="description"
+      content="About Bryne Loteria - Aspiring Software Engineer"
+    />
     <link
       rel="shortcut icon"
       href="./assets/loteria_logo.png"
@@ -18,7 +21,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
     />
-    <title>Loteria De Portfolio - Home</title>
+    <title>Loteria De Portfolio - About</title>
   </head>
   <body>
     <!-- BACKGROUND ANIMATION -->
@@ -63,8 +66,9 @@
       </div>
     </header>
 
-    <!-- HERO -->
-
+    <!-- ═══════════════════════════════════════════
+         HERO
+         ═══════════════════════════════════════════ -->
     <section class="aboutPage-hero">
       <div class="aboutPage-hero__background">
         <div class="aboutPage-hero__overlay overlay"></div>
@@ -74,16 +78,22 @@
           <div class="hero__section-left">
             <div class="hero__typography">
               <h1 class="hero__title">About Me</h1>
-              <h2 class="hero__subtitle">Aspiring Software Engineer</h2>
+              <h2 class="hero__subtitle aboutPage-hero__typewriter">
+                Aspiring to be a <br />
+                <span
+                  class="typewriter"
+                  data-words='["Software Engineer", "Web Developer", "Game Developer", "Problem Solver"]'
+                ></span>
+              </h2>
               <p class="hero__description">
                 Hello! I'm Bryne Mckherl C. Loteria!
               </p>
             </div>
           </div>
-          <div class="aboutPage-hero_section-right">
+          <div class="aboutPage-hero__section-right">
             <img
               src="./assets/about/aboutPage-hero-image.jpeg"
-              alt="AboutPage Hero Image"
+              alt="Bryne Loteria"
               class="hero__image aboutPage-hero__image"
             />
           </div>
@@ -91,58 +101,349 @@
       </div>
     </section>
 
-    <!-- Personal Life -->
-
+    <!-- ═══════════════════════════════════════════
+         PERSONAL LIFE
+         4-column: each column = image on top, paragraph below
+         ═══════════════════════════════════════════ -->
     <section class="aboutPage-personal">
       <div class="container">
-        <div class="personal__grid"></div>
+        <h2 class="section-title reveal">Personal Life</h2>
+        <p class="section-description reveal">
+          A few snapshots and stories from my everyday life.
+        </p>
+
+        <div class="aboutPage-personal__grid reveal-stagger">
+          <div class="aboutPage-personal__item reveal-scale">
+            <div class="aboutPage-personal__img-wrap">
+              <img src="./assets/about/about-1-1.jpg" alt="Personal Photo 1" />
+            </div>
+            <p class="aboutPage-personal__caption">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet
+              diam, idio tellus iltrice orci interdum pellentesque vitae.
+            </p>
+          </div>
+
+          <div class="aboutPage-personal__item reveal-scale">
+            <div class="aboutPage-personal__img-wrap">
+              <img src="./assets/about/about-1-2.jpg" alt="Personal Photo 2" />
+            </div>
+            <p class="aboutPage-personal__caption">
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+              accusantium doloremque laudantium totam rem aperiam.
+            </p>
+          </div>
+
+          <div class="aboutPage-personal__item reveal-scale">
+            <div class="aboutPage-personal__img-wrap">
+              <img src="./assets/about/about-1-3.jpg" alt="Personal Photo 3" />
+            </div>
+            <p class="aboutPage-personal__caption">
+              Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
+              aut fugit, sed quia consequuntur magni dolores.
+            </p>
+          </div>
+
+          <div class="aboutPage-personal__item reveal-scale">
+            <div class="aboutPage-personal__img-wrap">
+              <img src="./assets/about/about-1-4.jpg" alt="Personal Photo 4" />
+            </div>
+            <p class="aboutPage-personal__caption">
+              Ut enim ad minima veniam, quis nostrum exercitationem ullam
+              corporis suscipit laboriosam nisi ut aliquid ex ea commodi.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- Education -->
+    <!-- EDUCATION -->
 
     <section class="aboutPage-education">
-      <div class="container"></div>
+      <div class="container">
+        <h2 class="section-title reveal">Education</h2>
+        <div class="aboutPage-education__banner reveal">
+          <img
+            src="./assets/about/aboutPage-education-campus.jpg"
+            alt="STI College San Pablo Campus"
+            class="aboutPage-education__banner-img"
+          />
+          <div class="aboutPage-education__banner-overlay">
+            <span class="aboutPage-education__banner-label"
+              >STI College San Pablo</span
+            >
+          </div>
+        </div>
+        <div class="aboutPage-education__row aboutPage-education__row--me">
+          <div class="aboutPage-education__img-wrap reveal-left">
+            <img
+              src="./assets/about/aboutPage-education-me.jpg"
+              alt="Bryne as a student"
+            />
+          </div>
+          <div class="aboutPage-education__details reveal-right">
+            <div class="aboutPage-education__meta">
+              <div class="aboutPage-education__meta-item">
+                <i class="fa-solid fa-building-columns"></i>
+                <div>
+                  <span class="aboutPage-education__meta-label">School</span>
+                  <span class="aboutPage-education__meta-value"
+                    >STI College San Pablo</span
+                  >
+                </div>
+              </div>
+              <div class="aboutPage-education__meta-item">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <div>
+                  <span class="aboutPage-education__meta-label">Course</span>
+                  <span class="aboutPage-education__meta-value"
+                    >Senior High IT in Mobile App & Web Development</span
+                  >
+                </div>
+              </div>
+              <div class="aboutPage-education__meta-item">
+                <i class="fa-solid fa-calendar-days"></i>
+                <div>
+                  <span class="aboutPage-education__meta-label">Grade</span>
+                  <span class="aboutPage-education__meta-value"
+                    >12th Grade</span
+                  >
+                </div>
+              </div>
+            </div>
+            <p class="aboutPage-education__paragraph">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet
+              diam, idio tellus iltrices orci interdum pellentesque vitae. Sed
+              ut perspiciatis unde omnis iste natus error sit voluptatem
+              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+              quae ab illo inventore veritatis et quasi architecto beatae vitae
+              dicta sunt explicabo.
+            </p>
+          </div>
+        </div>
+
+        <div class="aboutPage-education__row aboutPage-education__row--class">
+          <div class="aboutPage-education__class-text reveal-left">
+            <h3 class="aboutPage-education__row-title">
+              My Club & School mates
+            </h3>
+            <p class="aboutPage-education__paragraph">
+              Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
+              aut fugit, sed quia consequuntur magni dolores eos qui ratione
+              voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem
+              ipsum quia dolor sit amet, consectetur, adipisci velit. Ut enim ad
+              minima veniam, quis nostrum exercitationem ullam corporis suscipit
+              laboriosam.
+            </p>
+          </div>
+          <div class="aboutPage-education__img-wrap reveal-right">
+            <img
+              src="./assets/about/aboutPage-education-club.jpg"
+              alt="Class photo"
+            />
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- Inspirations -->
-
+    <!-- ═══════════════════════════════════════════
+         INSPIRATIONS
+         4 games — each as a featured landscape card:
+         big image left, description right
+         ═══════════════════════════════════════════ -->
     <section class="aboutPage-inspirations">
-      <div class="container"></div>
+      <div class="container">
+        <h2 class="section-title reveal">Inspirations</h2>
+        <p class="section-description reveal">
+          Games that shaped how I think, create, and push forward.
+        </p>
+
+        <div class="aboutPage-inspirations__list">
+          <!-- Inspiration 1 -->
+          <div class="aboutPage-inspirations__item reveal-left">
+            <div class="aboutPage-inspirations__img-wrap">
+              <img
+                src="./assets/about/about-3-1.png"
+                alt="Game Inspiration 1"
+              />
+            </div>
+            <div class="aboutPage-inspirations__content">
+              <h3 class="aboutPage-inspirations__title">Game Title One</h3>
+              <p class="aboutPage-inspirations__desc">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet
+                diam, idio tellus iltrices orci interdum pellentesque vitae. Sed
+                ut perspiciatis unde omnis iste natus error sit voluptatem
+                accusantium doloremque laudantium, totam rem aperiam eaque ipsa
+                quae ab illo inventore veritatis et quasi architecto beatae.
+              </p>
+            </div>
+          </div>
+
+          <!-- Inspiration 2 — mirrored -->
+          <div
+            class="aboutPage-inspirations__item aboutPage-inspirations__item--mirrored reveal-right"
+          >
+            <div class="aboutPage-inspirations__img-wrap">
+              <img
+                src="./assets/about/about-3-2.png"
+                alt="Game Inspiration 2"
+              />
+            </div>
+            <div class="aboutPage-inspirations__content">
+              <h3 class="aboutPage-inspirations__title">Game Title Two</h3>
+              <p class="aboutPage-inspirations__desc">
+                Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
+                aut fugit, sed quia consequuntur magni dolores eos qui ratione
+                voluptatem sequi nesciunt. Neque porro quisquam est qui dolorem
+                ipsum quia dolor sit amet consectetur adipisci.
+              </p>
+            </div>
+          </div>
+
+          <!-- Inspiration 3 -->
+          <div class="aboutPage-inspirations__item reveal-left">
+            <div class="aboutPage-inspirations__img-wrap">
+              <img
+                src="./assets/about/about-3-3.png"
+                alt="Game Inspiration 3"
+              />
+            </div>
+            <div class="aboutPage-inspirations__content">
+              <h3 class="aboutPage-inspirations__title">Game Title Three</h3>
+              <p class="aboutPage-inspirations__desc">
+                Ut enim ad minima veniam, quis nostrum exercitationem ullam
+                corporis suscipit laboriosam nisi ut aliquid ex ea commodi
+                consequatur. Quis autem vel eum iure reprehenderit qui in ea
+                voluptate velit esse quam nihil molestiae consequatur vel.
+              </p>
+            </div>
+          </div>
+
+          <!-- Inspiration 4 — mirrored -->
+          <div
+            class="aboutPage-inspirations__item aboutPage-inspirations__item--mirrored reveal-right"
+          >
+            <div class="aboutPage-inspirations__img-wrap">
+              <img
+                src="./assets/about/about-3-4.png"
+                alt="Game Inspiration 4"
+              />
+            </div>
+            <div class="aboutPage-inspirations__content">
+              <h3 class="aboutPage-inspirations__title">Game Title Four</h3>
+              <p class="aboutPage-inspirations__desc">
+                At vero eos et accusamus et iusto odio dignissimos ducimus qui
+                blanditiis praesentium voluptatum deleniti atque corrupti quos
+                dolores et quas molestias excepturi sint occaecati cupiditate
+                non provident, similique sunt in culpa qui officia deserunt.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- Hobbies -->
-
+    <!-- ═══════════════════════════════════════════
+         HOBBIES
+         Intro paragraph + 4-col gallery with label
+         ═══════════════════════════════════════════ -->
     <section class="aboutPage-hobbies">
-      <div class="container"></div>
+      <div class="container">
+        <h2 class="section-title reveal">Hobbies</h2>
+
+        <p class="aboutPage-hobbies__intro reveal">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet diam,
+          idio tellus iltrices orci interdum pellentesque vitae. Sed ut
+          perspiciatis unde omnis iste natus error sit voluptatem accusantium
+          doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo
+          inventore veritatis et quasi architecto beatae vitae dicta sunt
+          explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
+          odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
+          voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum
+          quia dolor sit amet.
+        </p>
+
+        <div class="aboutPage-hobbies__gallery reveal-stagger">
+          <div class="aboutPage-hobbies__item reveal-scale">
+            <div class="aboutPage-hobbies__img-wrap">
+              <img src="./assets/about/about-2-1.jpg" alt="Gaming" />
+              <div class="aboutPage-hobbies__img-overlay">
+                <i class="fa-solid fa-gamepad-modern"></i>
+              </div>
+            </div>
+            <div class="aboutPage-hobbies__label">
+              <i class="fa-solid fa-gamepad"></i>
+              <span>Gaming</span>
+            </div>
+          </div>
+
+          <div class="aboutPage-hobbies__item reveal-scale">
+            <div class="aboutPage-hobbies__img-wrap">
+              <img src="./assets/about/about-2-2.jpg" alt="Reading" />
+              <div class="aboutPage-hobbies__img-overlay">
+                <i class="fa-solid fa-book-open"></i>
+              </div>
+            </div>
+            <div class="aboutPage-hobbies__label">
+              <i class="fa-solid fa-book-open"></i>
+              <span>Reading</span>
+            </div>
+          </div>
+
+          <div class="aboutPage-hobbies__item reveal-scale">
+            <div class="aboutPage-hobbies__img-wrap">
+              <img src="./assets/about/about-2-3.jpg" alt="Design" />
+              <div class="aboutPage-hobbies__img-overlay">
+                <i class="fa-solid fa-pen-nib"></i>
+              </div>
+            </div>
+            <div class="aboutPage-hobbies__label">
+              <i class="fa-solid fa-pen-nib"></i>
+              <span>Design</span>
+            </div>
+          </div>
+
+          <div class="aboutPage-hobbies__item reveal-scale">
+            <div class="aboutPage-hobbies__img-wrap">
+              <img src="./assets/about/about-2-4.jpg" alt="Coding" />
+              <div class="aboutPage-hobbies__img-overlay">
+                <i class="fa-solid fa-code"></i>
+              </div>
+            </div>
+            <div class="aboutPage-hobbies__label">
+              <i class="fa-solid fa-code"></i>
+              <span>Coding</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- CONTACT -->
-
     <section class="contact">
       <div class="container">
-        <h2 class="section-title">I Would Love to work with you!</h2>
-        <p class="section-description">
+        <h2 class="section-title reveal">I Would Love to work with you!</h2>
+        <p class="section-description reveal">
           Let's learn and build something together.
         </p>
-        <a href="#" class="contact__button">CONTACT ME</a>
+        <a href="./contact.html" class="contact__button reveal">CONTACT ME</a>
       </div>
     </section>
 
     <!-- FOOTER -->
-
     <footer class="footer">
       <div class="container">
         <div class="footer__grid">
-          <div class="footer__col footer__col--left">
+          <div class="footer__col footer__col--left reveal">
             <ul class="footer__contact">
               <li>
                 <i class="fa-solid fa-envelope"></i>
-                <a href="mailto:you@email.com">mckycenloteria@gmail.com</a>
+                <a href="mailto:mckycenloteria@gmail.com"
+                  >mckycenloteria@gmail.com</a
+                >
               </li>
               <li>
                 <i class="fa-solid fa-phone"></i>
-                <a href="tel:+1234567890">+63 917 325 1501</a>
+                <a href="tel:+639173251501">+63 917 325 1501</a>
               </li>
               <li>
                 <i class="fa-solid fa-location-dot"></i>
@@ -153,27 +454,30 @@
               </li>
             </ul>
           </div>
-          <div class="footer__col footer__col--center">
+          <div
+            class="footer__col footer__col--center reveal"
+            style="transition-delay: 0.15s"
+          >
             <p class="footer__copyright">
               © 2026 Loteria De Portfolio. All rights reserved.
             </p>
-            <p class="footer__credit">Designed & Built by Bryne Loteria</p>
+            <p class="footer__credit">Designed &amp; Built by Bryne Loteria</p>
           </div>
-          <div class="footer__col footer__col--right">
+          <div
+            class="footer__col footer__col--right reveal"
+            style="transition-delay: 0.3s"
+          >
             <div class="socials-container">
               <a href="#"><i class="fa-brands fa-github"></i></a>
               <a href="#"><i class="fa-brands fa-linkedin"></i></a>
               <a href="#"><i class="fa-brands fa-facebook"></i></a>
-              <a href="#" class="socials__button">
-                <i class="fa-brands fa-x-twitter"></i>
-              </a>
+              <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
             </div>
           </div>
         </div>
       </div>
     </footer>
 
-    <!-- SCRIPT -->
     <script src="./script.js"></script>
   </body>
 </html>

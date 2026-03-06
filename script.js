@@ -137,3 +137,47 @@ if (backdrop) {
     });
   });
 }
+
+// Typewriter
+
+class Typewriter {
+  constructor(el) {
+    this.el = el;
+    this.words = JSON.parse(el.dataset.words);
+    this.index = 0;
+    this.char = 0;
+    this.deleting = false;
+    this.typeSpeed = 90;
+    this.deleteSpeed = 50;
+    this.pauseAfterType = 1800;
+    this.pauseAfterDelete = 400;
+    this.el.classList.add("typewriter--blink");
+    this.tick();
+  }
+
+  tick() {
+    const word = this.words[this.index];
+    const current = this.deleting
+      ? word.slice(0, this.char - 1)
+      : word.slice(0, this.char + 1);
+
+    this.el.textContent = current;
+    this.char = this.deleting ? this.char - 1 : this.char + 1;
+
+    let delay = this.deleting ? this.deleteSpeed : this.typeSpeed;
+
+    if (!this.deleting && current === word) {
+      delay = this.pauseAfterType;
+      this.deleting = true;
+    } else if (this.deleting && current === "") {
+      this.deleting = false;
+      this.index = (this.index + 1) % this.words.length;
+      delay = this.pauseAfterDelete;
+    }
+
+    setTimeout(() => this.tick(), delay);
+  }
+}
+
+// Init all typewriter elements on the page
+document.querySelectorAll(".typewriter").forEach((el) => new Typewriter(el));

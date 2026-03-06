@@ -1,5 +1,5 @@
 /* ============================================================
-   styles.css — Creative Visual Designs (CVD)
+   styles.css — Personal Portfolio
    ============================================================
    TABLE OF CONTENTS
    -----------------
@@ -18,7 +18,6 @@
    13. Contact Page
    14. Animations
    15. Aurora
-   16. Scroll Animations
 */
 
 /* ============================================================
@@ -594,7 +593,12 @@ body {
   font-size: clamp(2.5rem, 4vw, 5.5rem);
   font-weight: 700;
   line-height: 1.4;
-  color: var(--clr-light);
+  background: var(--gradient-electric);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 0.5px var(--clr-dark-secondary);
+  background-clip: text;
+  padding-right: 4px;
 }
 
 .hero__description {
@@ -914,7 +918,13 @@ body {
 
 .contact {
   padding: 5rem 0;
-  background: rgba(15, 23, 42, 0.8);
+  background: linear-gradient(
+    135deg,
+    transparent,
+    rgba(var(--rgb-accent), 0.15),
+    rgba(var(--rgb-primary), 0.15),
+    transparent
+  );
 
   & .container {
     display: flex;
@@ -1728,6 +1738,554 @@ body {
 .modal::-webkit-scrollbar-thumb {
   background: rgba(6, 182, 212, 0.3);
   border-radius: 999px;
+}
+
+/* ============================================================
+   about.css — About Page Styles
+   ============================================================
+*/
+.aboutPage-hero {
+  padding-top: calc(var(--header-height) + 6rem);
+  padding-bottom: 6rem;
+  position: relative;
+  overflow: hidden;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+}
+
+.aboutPage-hero__background {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.aboutPage-hero__overlay {
+  position: absolute;
+  inset: 0;
+  opacity: 0.75;
+  background: var(--gradient-shimmer);
+}
+
+.aboutPage-hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+.aboutPage-hero__typewriter {
+  color: var(--clr-light-warm);
+}
+
+.typewriter {
+  background: var(--gradient-electric);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  border-right: 2px solid var(--clr-accent);
+  padding-right: 4px;
+}
+
+.typewriter--blink {
+  animation: cursor-blink 0.7s step-end infinite;
+}
+
+@keyframes cursor-blink {
+  0%,
+  100% {
+    border-color: var(--clr-accent);
+  }
+  50% {
+    border-color: transparent;
+  }
+}
+
+.aboutPage-hero__grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  align-items: center;
+  gap: 6rem;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    text-align: center;
+    justify-items: center;
+  }
+}
+
+.aboutPage-hero__section-right {
+  display: flex;
+  justify-content: flex-end;
+
+  @media (max-width: 768px) {
+    justify-content: center;
+  }
+}
+
+.aboutPage-hero__image {
+  border-radius: 50%;
+  object-fit: cover;
+  width: clamp(180px, 20vw, 340px);
+  height: clamp(180px, 20vw, 340px);
+  border: 3px solid rgba(var(--rgb-accent), 0.4);
+  box-shadow: 0 0 40px rgba(var(--rgb-accent), 0.15);
+}
+
+/* ============================================================
+   2. PERSONAL LIFE
+   ============================================================ */
+
+.aboutPage-personal {
+  padding: 7rem 0;
+  background: rgba(18, 45, 74, 0.5);
+}
+
+.aboutPage-personal__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2.4rem;
+  margin-top: 5rem;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 560px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.aboutPage-personal__item {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+  background: var(--gradient-surface);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  transition: var(--transition);
+
+  &:hover {
+    border-color: var(--clr-accent);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-accent-glow);
+  }
+}
+
+.aboutPage-personal__img-wrap {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+
+  & img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+  }
+}
+
+.aboutPage-personal__item:hover .aboutPage-personal__img-wrap img {
+  transform: scale(1.06);
+}
+
+.aboutPage-personal__caption {
+  padding: 0 1.8rem 1.8rem;
+  font-size: clamp(1.2rem, 1.4vw, 1.4rem);
+  color: var(--clr-light-warm);
+  line-height: 1.7;
+  text-align: justify;
+}
+
+/* ============================================================
+   3. EDUCATION
+   ============================================================ */
+
+.aboutPage-education {
+  padding: 7rem 0;
+  background: rgba(15, 23, 42, 0.75);
+}
+
+/* ── Campus Banner ── */
+
+.aboutPage-education__banner {
+  position: relative;
+  width: 100%;
+  height: clamp(180px, 28vw, 380px);
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  margin-top: 4rem;
+  margin-bottom: 6rem;
+}
+
+.aboutPage-education__banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: brightness(0.6);
+  transition: transform 0.6s ease;
+}
+
+.aboutPage-education__banner:hover .aboutPage-education__banner-img {
+  transform: scale(1.04);
+}
+
+.aboutPage-education__banner-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  padding: clamp(1.5rem, 3vw, 3rem);
+  background: linear-gradient(
+    to top,
+    rgba(10, 18, 36, 0.85) 0%,
+    transparent 60%
+  );
+}
+
+.aboutPage-education__banner-label {
+  font-size: clamp(1.6rem, 3vw, 2.8rem);
+  font-weight: 700;
+  background: var(--gradient-frost);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: 0.04em;
+}
+
+/* ── Shared row layout ── */
+
+.aboutPage-education__row {
+  display: grid;
+  gap: clamp(2rem, 5vw, 6rem);
+  align-items: center;
+  margin-bottom: 6rem;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr !important;
+    gap: 3rem;
+  }
+}
+
+.aboutPage-education__row--me {
+  grid-template-columns: 1fr 1.6fr;
+}
+
+.aboutPage-education__row--class {
+  grid-template-columns: 1.6fr 1fr;
+}
+
+.aboutPage-education__img-wrap {
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  border: 1px solid rgba(var(--rgb-accent), 0.2);
+  box-shadow: var(--shadow-accent-glow);
+
+  & img {
+    width: 100%;
+    height: clamp(220px, 30vw, 420px);
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+  }
+
+  &:hover img {
+    transform: scale(1.04);
+  }
+}
+
+/* ── Meta details block ── */
+
+.aboutPage-education__details {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.aboutPage-education__meta {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  padding: 2.4rem;
+  background: var(--gradient-surface);
+  border: 1px solid rgba(var(--rgb-accent), 0.15);
+  border-radius: var(--border-radius-lg);
+}
+
+.aboutPage-education__meta-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.4rem;
+
+  & i {
+    color: var(--clr-accent);
+    font-size: clamp(1.6rem, 2vw, 2rem);
+    margin-top: 0.2rem;
+    flex-shrink: 0;
+  }
+
+  & div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+}
+
+.aboutPage-education__meta-label {
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--clr-accent);
+}
+
+.aboutPage-education__meta-value {
+  font-size: clamp(1.3rem, 1.6vw, 1.6rem);
+  font-weight: 500;
+  color: var(--clr-light);
+}
+
+.aboutPage-education__paragraph {
+  font-size: clamp(1.2rem, 1.5vw, 1.5rem);
+  color: var(--clr-light-warm);
+  line-height: 1.8;
+  text-align: justify;
+}
+
+/* ── Class row extras ── */
+
+.aboutPage-education__class-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.aboutPage-education__row-title {
+  font-size: clamp(2rem, 3vw, 2.8rem);
+  font-weight: 700;
+  background: var(--gradient-frost);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ============================================================
+   4. INSPIRATIONS
+   ============================================================ */
+
+.aboutPage-inspirations {
+  padding: 7rem 0;
+  background: rgba(18, 45, 74, 0.6);
+}
+
+.aboutPage-inspirations__list {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(3rem, 5vw, 6rem);
+  margin-top: 5rem;
+}
+
+.aboutPage-inspirations__item {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: clamp(2rem, 4vw, 5rem);
+  align-items: center;
+  padding: 3rem;
+  background: var(--gradient-surface);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: var(--border-radius-xl);
+  transition: var(--transition);
+
+  &:hover {
+    border-color: rgba(var(--rgb-accent), 0.3);
+    box-shadow: var(--shadow-accent-glow);
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+/* Mirrored — image on right */
+.aboutPage-inspirations__item--mirrored {
+  grid-template-columns: 1fr 1.2fr;
+
+  & .aboutPage-inspirations__img-wrap {
+    order: 2;
+  }
+
+  & .aboutPage-inspirations__content {
+    order: 1;
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+
+    & .aboutPage-inspirations__img-wrap {
+      order: 0;
+    }
+    & .aboutPage-inspirations__content {
+      order: 1;
+    }
+  }
+}
+
+.aboutPage-inspirations__img-wrap {
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+
+  & img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s ease;
+  }
+}
+
+.aboutPage-inspirations__item:hover .aboutPage-inspirations__img-wrap img {
+  transform: scale(1.05);
+}
+
+.aboutPage-inspirations__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.aboutPage-inspirations__title {
+  font-size: clamp(2rem, 2.5vw, 2.8rem);
+  font-weight: 700;
+  background: var(--gradient-electric);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.2;
+}
+
+.aboutPage-inspirations__desc {
+  font-size: clamp(1.2rem, 1.5vw, 1.5rem);
+  color: var(--clr-light-warm);
+  line-height: 1.8;
+  text-align: justify;
+}
+
+/* ============================================================
+   5. HOBBIES
+   ============================================================ */
+
+.aboutPage-hobbies {
+  padding: 7rem 0;
+  background: rgba(15, 23, 42, 0.8);
+}
+
+.aboutPage-hobbies__intro {
+  max-width: 82rem;
+  margin: 0 auto 5rem;
+  font-size: clamp(1.3rem, 1.6vw, 1.6rem);
+  color: var(--clr-light-warm);
+  line-height: 1.9;
+  text-align: justify;
+}
+
+.aboutPage-hobbies__gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+  }
+}
+
+.aboutPage-hobbies__item {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition: var(--transition);
+  cursor: default;
+
+  &:hover {
+    border-color: var(--clr-accent);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-accent-glow);
+  }
+}
+
+.aboutPage-hobbies__img-wrap {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+
+  & img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+  }
+}
+
+.aboutPage-hobbies__item:hover .aboutPage-hobbies__img-wrap img {
+  transform: scale(1.08);
+}
+
+.aboutPage-hobbies__img-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(var(--rgb-accent), 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+
+  & i {
+    font-size: clamp(2.4rem, 4vw, 4rem);
+    color: var(--clr-white);
+    opacity: 0;
+    transform: scale(0.7);
+    transition:
+      opacity 0.3s ease,
+      transform 0.3s ease;
+  }
+}
+
+.aboutPage-hobbies__item:hover .aboutPage-hobbies__img-overlay {
+  background: rgba(var(--rgb-accent), 0.35);
+
+  & i {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.aboutPage-hobbies__label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  padding: 1.2rem 1rem;
+  background: var(--gradient-surface);
+  font-size: clamp(1.2rem, 1.5vw, 1.4rem);
+  font-weight: 600;
+  color: var(--clr-light);
+
+  & i {
+    color: var(--clr-accent);
+    font-size: clamp(1.3rem, 1.6vw, 1.6rem);
+  }
 }
 
 /* ============================================================
